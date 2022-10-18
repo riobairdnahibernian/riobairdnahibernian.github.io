@@ -13,9 +13,26 @@
 
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <div id="my_content">Loading...</div>
-    <div id="results"></div>
+
+  	<div class="container text-center">
+	  <div class="row">
+	    <div class="col">
+	      Left Column
+	    </div>
+	    <div class="col">
+	      <h1>Hello, world!</h1>
+		    <div id="my_content">Loading...</div>
+		    <div id="results"></div>
+		</div>
+	    <div class="col">
+	      Right Column
+	    </div>
+	  </div>
+	</div>
+
+
+
+    
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -23,18 +40,23 @@
 
     <script>
  
-	  $(function() {
-	    $("#my_content").text( "Loaded." );
-	  });
+	$(function() {
+	    
+	  var page_path = "test.md"  
+	  $("#my_content").text( "Displaying the markdown from: "+page_path+" with 'marked' library" );
+	  
 
 	  $.ajax({
-		  url: "test.md",
+		  url: page_path,
 		  cache: false
 		})
 		.done(function( html ) {
 		  $( "#results" ).append( marked.parse(html) );
 		});
-	 
+
+
+
+	});
 	  </script>
 
   </body>
