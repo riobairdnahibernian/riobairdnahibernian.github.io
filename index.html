@@ -50,7 +50,7 @@
 			cache: false
 		})
 		.done(function( html ) {
-			$( "#results" ).append( marked.parse(html) );
+			$( "#results" ).html( marked.parse(html) );
 		});
 
 	});
