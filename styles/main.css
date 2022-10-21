@@ -1,1 +1,145 @@
 /* style */
+html{
+  background: url("../images/bg-gradient.svg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  shape-renderer: crispEdges;
+}
+body{
+	background-color: transparent;
+}
+html, body{
+	font-family: acumin-pro, sans-serif;
+	font-weight: 300;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+}
+
+#csi_tab{
+	top: 10px;
+	right: -10px;
+	width: 20px;
+	height: 40px;
+	background-color: #a4df53;
+	border-radius: 10px;
+	cursor: pointer;
+	position: absolute;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.split {
+  width: 100%;
+  height:100%;
+
+}
+
+.si-center{
+	width:45%;
+	background-color: #a4df53;
+	position: relative;
+}
+
+.si-concept{
+    background-image: url(../images/semi-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 360px;
+    background-position-x: -180px;
+    background-position-y: 30%;
+    color: #fff;
+}
+.si-concept .col{
+	position: relative;
+}
+#circles2{
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	bottom: -10%;
+	background-image: url(../images/semi-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#csi_home{
+	padding-top: 120px;
+}
+#si_home{
+    padding-top: 210px;
+}
+
+#csi_logo{
+	margin-bottom: 20px;
+}
+
+.gutter {
+  cursor: ew-resize;
+  height:100px;
+  background: red;
+}
+
+
+
+/* FONTS
+
+Acumin Pro Bold
+
+font-family: acumin-pro, sans-serif;
+font-weight: 700;
+font-style: normal;
+
+
+Acumin Pro Bold Italic
+
+font-family: acumin-pro, sans-serif;
+font-weight: 700;
+font-style: italic;
+
+
+Acumin Pro Extra Light
+
+font-family: acumin-pro, sans-serif;
+font-weight: 200;
+font-style: normal;
+
+
+Acumin Pro Italic
+
+font-family: acumin-pro, sans-serif;
+font-weight: 400;
+font-style: italic;
+
+
+Acumin Pro Extra Light Italic
+
+font-family: acumin-pro, sans-serif;
+font-weight: 200;
+font-style: italic;
+
+
+Acumin Pro Light
+
+font-family: acumin-pro, sans-serif;
+font-weight: 300;
+font-style: normal;
+
+
+Acumin Pro Light Italic
+
+font-family: acumin-pro, sans-serif;
+font-weight: 300;
+font-style: italic;
+
+
+Acumin Pro Regular
+
+font-family: acumin-pro, sans-serif;
+font-weight: 400;
+font-style: normal;
+*/
