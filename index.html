@@ -15,30 +15,28 @@
   </head>
   <body>
 
-  	<div class="content">
-	    <div class="split si-center">
 	       	<div class="container-fluid min-vh-100 d-flex flex-column">
 			  	<div class="row flex-grow-1">
-				    <div class="col text-center">
+				    
+				    <div class="col-md-3 text-center si-center">
 				      <div id="csi_home">
 				      	<img id="csi_logo" src="images/center-logo.svg">
 				      </div>
 				      <div id="csi_tab"></div>
 				    </div>
-				</div>
-			</div>
-	    </div>
-	    <div class="split si-concept">
-	        <div class="container-fluid min-vh-100 d-flex flex-column">
-			  	<div class="row flex-grow-1">
-				    <div class="col">
-				      <div id="si_home">Waiting for content</div>
+				    
+				    <div class="col-md si-concept">
+
+				    	<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+						    <div id="si_home">Waiting for content</div>
+						</div>
+
 				      <div id="circles2"></div>
 				    </div>
 				</div>
+			
+
 	  		</div>
-		</div>
-	</div>
 
 
 
@@ -77,8 +75,12 @@
 
 		
 		$(document).on("click", ".si-concept",function() {
+
+			var mw = $(".si-center").outerWidth();
+			console.log("mw",mw)
+
 			var center_style = {
-				"margin-left":"-30%",
+				"margin-left":-(mw-10)+"px",
 				"transition": "all .2s ease-in-out"
 			}
 			
@@ -89,7 +91,7 @@
 			}
 
 			$(".si-center").css( center_style );
-			$(this).css(concept_style)
+			$(".si-concept").css(concept_style)
 
 		})
 		$("#csi_tab").on("click", function(){

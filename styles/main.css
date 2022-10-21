@@ -27,6 +27,11 @@ html, body{
 	border-radius: 10px;
 	cursor: pointer;
 	position: absolute;
+	background-image: url(../images/tab-lines.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-position: 75%;
+    background-size: 20%;
 }
 .content {
   width: 100%;
@@ -42,7 +47,7 @@ html, body{
 }
 
 .si-center{
-	width:45%;
+	/*width:45%;*/
 	background-color: #a4df53;
 	position: relative;
 }
@@ -70,12 +75,13 @@ html, body{
 #csi_home{
 	padding-top: 120px;
 }
-#si_home{
+/*#si_home{
     padding-top: 210px;
-}
+}*/
 
 #csi_logo{
 	margin-bottom: 20px;
+	max-width: 320px;
 }
 
 .gutter {
