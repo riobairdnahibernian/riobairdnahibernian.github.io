@@ -1,15 +1,5 @@
 /* style */
-html{
-  background: url("../images/bg-gradient.svg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  shape-renderer: crispEdges;
-}
-body{
-	background-color: transparent;
-}
+
 html, body{
 	font-family: acumin-pro, sans-serif;
 	font-weight: 300;
@@ -88,6 +78,45 @@ html, body{
   cursor: ew-resize;
   height:100px;
   background: red;
+}
+
+.navbar-brand img{
+	width: 300px;
+}
+
+.big-image{
+		background-image: url(../images/concert.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.big-image [class^='col']{
+		margin-top: 100px;
+		margin-bottom: 100px;
+		padding-top: 100px;
+		padding-bottom: 100px;
+		background-color: #fff;
+}
+
+
+.bg-green{
+
+	background-color: #a4df53;
+}
+
+
+@media (max-width: 992px) { 
+	.big-image [class^='col']{
+			margin-top: 20px;
+			margin-bottom: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			background-color: transparent;
+	}
+	.navbar-brand img{
+		width: 220px;
+	}
+
+
 }
 
 
