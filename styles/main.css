@@ -167,7 +167,7 @@ html, body{
 }
 
 @media (max-width: 992px) { 
-	.big-image [class^='col']{
+	.about .big-image [class^='col']{
 			margin-top: 20px;
 			margin-bottom: 20px;
 			padding-top: 10px;
@@ -184,6 +184,7 @@ html, body{
 	}
 	.inner-main-content{
 		padding: unset;
+		padding-top: 2rem;
 	}
 
 }
