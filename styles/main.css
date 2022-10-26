@@ -1,4 +1,4 @@
-/* style */
+ style */
 
 html, body{
 	font-family: acumin-pro, sans-serif;
@@ -6,6 +6,14 @@ html, body{
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-weight: 200;
+}
+.h2, h2{
+	color: #268fcc;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(0,0,0,.9);
+    border-bottom: #a4df53 0.25em solid;
 }
 
 #csi_tab{
@@ -21,8 +29,9 @@ html, body{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-position: 75%;
-    background-size: 20%;
+  background-size: 20%;
 }
+
 .content {
   width: 100%;
   height: 100%;
@@ -30,6 +39,7 @@ html, body{
   justify-items: center;
   align-items: center;
 }
+
 .split {
   width: 100%;
   height:100%;
@@ -50,9 +60,11 @@ html, body{
     background-position-y: 30%;
     color: #fff;
 }
+
 .si-concept .col{
 	position: relative;
 }
+
 #circles2{
 	width: 50%;
 	height: 50%;
@@ -62,9 +74,11 @@ html, body{
     background-repeat: no-repeat;
     background-size: 100%;
 }
+
 #csi_home{
 	padding-top: 120px;
 }
+
 /*#si_home{
     padding-top: 210px;
 }*/
@@ -81,7 +95,7 @@ html, body{
 }
 
 .navbar-brand img{
-	width: 300px;
+	width: 400px;
 }
 
 .big-image{
@@ -89,20 +103,68 @@ html, body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.big-image [class^='col']{
+.panels .big-image{
+    background-size: 100%;
+}
+
+.about .big-image [class^='col']{
 		margin-top: 100px;
-		margin-bottom: 100px;
+		margin-bottom: 300px;
 		padding-top: 100px;
 		padding-bottom: 100px;
 		background-color: #fff;
+		position: relative;
 }
-
-
+.inner-main-content{
+	padding: 5rem;
+}
+.arr-down img{
+	width: 60px;
+	height: 60px;
+}
+/*.bg-white{
+	background-color: #fff;
+}*/
 .bg-green{
-
 	background-color: #a4df53;
 }
+.bg-purple{
+	background-color:rgba(57, 0, 82, 0.75);
+}
+.bg-yellow{
+	background-color: #fee201;
+}
+.bg-orange{
+	background-color: #fc7430;
+}
+.clr-green{
+	color: #a4df53;
+}
 
+.si-link{
+	position: absolute;
+	margin-top: -50px;
+	right: 40px;
+}
+
+.si-link a::after{
+	content: url(../images/blue-triangle.svg);
+  width: 14px;
+  position: absolute;
+  top: 10px;
+  margin-left: 5px;
+}
+
+.align-end{
+	align-items: end!important;
+}
+.panels-menu.list-group-flush>.list-group-item {
+	border-width: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
 
 @media (max-width: 992px) { 
 	.big-image [class^='col']{
@@ -115,11 +177,26 @@ html, body{
 	.navbar-brand img{
 		width: 220px;
 	}
-
+	.si-link{
+		position:  relative;
+		margin-top: unset;
+		right: unset;
+	}
+	.inner-main-content{
+		padding: unset;
+	}
 
 }
 
+/*COLORS
 
+green #a4df53
+blue #268fcc
+yellow #fee201
+orange #fc7430
+purple #390052
+
+*/
 
 /* FONTS
 
@@ -177,4 +254,3 @@ Acumin Pro Regular
 font-family: acumin-pro, sans-serif;
 font-weight: 400;
 font-style: normal;
-*/

@@ -1,4 +1,4 @@
-[About](center-page.html)
+[About](center-about.html)
 
 [Mission](mission.html)
 
