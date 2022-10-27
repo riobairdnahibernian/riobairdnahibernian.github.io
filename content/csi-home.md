@@ -2,7 +2,7 @@
 
 [Mission](mission.html)
 
-[Panels](panels.html)
+[Panels](center-panels.html)
 
 [Publications](publications.html)
 

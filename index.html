@@ -25,30 +25,26 @@
 				}	
     </style>
   </head>
-  <body>
+  <body class="home">
 
-	       	<div class="container-fluid min-vh-100 d-flex flex-column">
-			  	<div class="row flex-grow-1">
+	    
 				    
-				    <div class="col-md-3 text-center si-center">
-				      <div id="csi_home">
+				    <div class="text-center si-center min-vh-100">
+					    <div id="csi_home">
 				      	<img id="csi_logo" src="images/center-logo.svg">
 				      </div>
 				      <div id="csi_tab"></div>
-				    </div>
-				    
-				    <div class="col-md si-concept">
+						</div>
 
+
+				    <div class="si-concept">
 				    	<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
 						    <div id="si_home">Waiting for content</div>
 						</div>
 
 				      <div id="circles2"></div>
 				    </div>
-				</div>
-			
-
-	  		</div>
+	
 
 
 
@@ -84,42 +80,83 @@
 			$( "#csi_home" ).append( marked.parse(html) );
 		});
 
-
+		
+		
+		
 		
 		$(document).on("click", ".si-concept",function() {
 
-			var mw = $(".si-center").outerWidth();
-			console.log("mw",mw)
 
-			var center_style = {
-				"margin-left":-(mw-10)+"px",
-				"transition": "all .2s ease-in-out"
-			}
-			
-			var concept_style = {
-				"padding-left":"15%",
-				"transition": "all .2s ease-in-out",
-				"background-position-x":"-40px"
-			}
+			var doc_w = $(document).outerWidth();
 
-			$(".si-center").css( center_style );
-			$(".si-concept").css(concept_style)
+			console.log("doc_w",doc_w)
+			if (doc_w >= 992) {
+				var mw = $(".si-center").outerWidth();
+
+				var center_style = {
+					"margin-left":-(mw-10)+"px",
+					"transition": "all .2s ease-in-out"
+				}
+				
+				var concept_style = {
+					// "padding-left":"15%",
+					"transition": "all .2s ease-in-out",
+					"background-position-x":"-40px",
+	    		"width": "100%",
+	    		"float": "none"
+				}
+
+				$(".si-center").css( center_style );
+				$(".si-concept").css( concept_style );
+			}
 
 		})
+
+
 		$("#csi_tab").on("click", function(){
 
-
-			var center_style = {
-				"margin-left":"0"
+			var doc_w = $(document).outerWidth();
+			if (doc_w >= 992) {
+				var center_style = {
+					"margin-left":"0",
+					"width":"30%"
+				}
+				var concept_style = {
+					"padding-left":"0px",
+					"width":"70%",
+					"background-position-x":"-180px",
+					"float":"left"
+					
+				}
+				$(".si-center").css(center_style);
+				$(".si-concept").css(concept_style);
 			}
-			var concept_style = {
-				"padding-left":"0px",
-				"background-position-x":"-180px"
-			}
 
-			$(".si-center").css(center_style);
-			$(".si-concept").css(concept_style)
 		});
+
+
+
+		$(document).on("click", "#csi_logo",function() {
+
+			var doc_w = $(document).outerWidth();
+			if (doc_w >= 992) {
+				var mw = $(".si-center").outerWidth();
+				var center_style = {
+					"margin-left":"-20px",
+					"width":"100%",
+					"transition": "all .2s ease-in-out"
+				}
+				var concept_style = {
+					"padding-left":"15%",
+					"margin-left":(mw)+"px",
+					"transition": "all .2s ease-in-out",
+					"background-position-x":"-40px"
+				}
+				$(".si-center").css( center_style );
+				$(".si-center").css( center_style );
+			}
+		})
+
 
 
 		// Split(['.si-center', '.si-concept']);

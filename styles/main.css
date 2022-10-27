@@ -47,9 +47,14 @@ html, body{
 }
 
 .si-center{
-	/*width:45%;*/
 	background-color: #a4df53;
 	position: relative;
+}
+
+.home .si-center{
+	width: 30%;
+	float: left;
+	z-index: 1000;
 }
 
 .si-concept{
@@ -59,6 +64,10 @@ html, body{
     background-position-x: -180px;
     background-position-y: 30%;
     color: #fff;
+}
+.home .si-concept{
+	width: 70%;
+	float: right;
 }
 
 .si-concept .col{
@@ -71,8 +80,8 @@ html, body{
 	position: absolute;
 	bottom: -10%;
 	background-image: url(../images/semi-circles.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #csi_home{
@@ -185,6 +194,26 @@ html, body{
 	.inner-main-content{
 		padding: unset;
 		padding-top: 2rem;
+	}
+	#csi_home {
+    padding-top: 0;
+	}
+	#csi_tab{
+		display: none;
+	}
+	.home .si-center {
+    width: 100%;
+    min-height: unset!important;
+    float: none; 
+    padding: 20px;
+  }
+  .home .si-concept {
+    width: 100%;
+    float: none; 
+    padding: 20px;
+	}
+	.home .si-concept .justify-content-center {
+    justify-content: start!important;
 	}
 
 }
