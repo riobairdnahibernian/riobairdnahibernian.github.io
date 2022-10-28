@@ -10,12 +10,21 @@ html, body{
 .h2, h2{
 	color: #268fcc;
 }
-
+.btn-primary {
+    color: #fff;
+    background-color: #ff0055;
+    border-color: #ff0055;
+}
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
     color: rgba(0,0,0,.9);
     border-bottom: #a4df53 0.25em solid;
 }
-
+.bd-navbar {
+    padding: 0.75rem 0;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), 0.95));
+    box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+}
 #csi_tab{
 	top: 10px;
 	right: -10px;
@@ -146,8 +155,14 @@ html, body{
 .bg-orange{
 	background-color: #fc7430;
 }
+.bg-blue{
+	background-color: #268fcc;
+}
 .clr-green{
 	color: #a4df53;
+}
+.clr-white{
+	color: #fff;
 }
 
 .si-link{
