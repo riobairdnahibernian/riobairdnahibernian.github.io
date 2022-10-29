@@ -1,4 +1,4 @@
-## Publications
+## Donations
 
 Imagine - It’s easy if you try!
 
