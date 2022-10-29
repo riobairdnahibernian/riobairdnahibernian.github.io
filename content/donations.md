@@ -18,4 +18,4 @@ Please consider donating to our mission - we are a Not For Profit Charity regist
 
 For more information please visit the Mission Statement Page
 
-The Center for Sympathetic Intelligence - where bringing depth to life is is our mission.
+The Center for Sympathetic Intelligence - where ##bringing depth## to life is is our mission.
