@@ -1,3 +1,5 @@
+## Publications
+
 Imagine - It’s easy if you try!
 
 Here at the Center for Sympathetic Intelligence we believe we are forging a way forward to a better future, for what the world needs now is a more caring society.
