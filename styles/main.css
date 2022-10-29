@@ -121,8 +121,13 @@ html, body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.panels .big-image{
+.inner-page .big-image{
     background-size: 100%;
+}
+.board .inner-main-content img{
+	float: left;
+	max-width: 150px;
+	margin: 8px 10px 0 0;
 }
 
 .about .big-image [class^='col']{

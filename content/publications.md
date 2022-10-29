@@ -1,4 +1,4 @@
-
+## Publications
 
 ### Sympathetic Intelligence in Education
 *by Robert Hamilton, Emily Barrett, and Jim Stellar*
