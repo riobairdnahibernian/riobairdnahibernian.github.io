@@ -1,7 +1,8 @@
-There are 6 levels of heading:
+# Click "RAW", or edit this page to see the source for some basic formatting.
 
-# heading 1. Don use this one.
-## Heading 2. This should be the main heading for interior pages
+
+# heading 1 Don't use this one.
+## Heading 2 This should be the main heading for interior pages
 ### Heading 3
 #### Heading 4
 ##### Heading 5
@@ -9,7 +10,7 @@ There are 6 levels of heading:
 
 > blockquote. Lorem ipsum dolor sit amet.
 
-some __bold__ text
+some __bold__ text   
 some *italic* text
 
 bullet list:
@@ -26,7 +27,7 @@ images:
 ![alt text for screen readers](/images/image.png "Text to show on mouseover")
 
 links to cheatsheets: 
-basics: https://www.markdownguide.org/cheat-sheet/
+basics: https://www.markdownguide.org/cheat-sheet/   
 more detailed: https://www.markdownguide.org/basic-syntax/
 
 
