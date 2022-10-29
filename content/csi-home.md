@@ -1,11 +1,9 @@
-[About](center-about.html)
+[About](/center-about.html)
 
-[Mission](mission.html)
+[Panels](/center-panels.html)
 
-[Panels](center-panels.html)
+[Publications](/center-publications.html)
 
-[Publications](publications.html)
+[Donations](/center-donations.html)
 
-[Donations](donations.html)
-
-[Contact](contact.html)
+[Contact](/center-contact.html)

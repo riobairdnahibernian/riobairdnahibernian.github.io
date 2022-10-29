@@ -130,7 +130,7 @@ html, body{
 	margin: 8px 10px 0 0;
 }
 
-.about .big-image [class^='col']{
+.home .big-image [class^='col']{
 		margin-top: 100px;
 		margin-bottom: 300px;
 		padding-top: 100px;
@@ -196,7 +196,7 @@ html, body{
 }
 
 @media (max-width: 992px) { 
-	.about .big-image [class^='col']{
+	.home .big-image [class^='col']{
 			margin-top: 20px;
 			margin-bottom: 20px;
 			padding-top: 10px;
