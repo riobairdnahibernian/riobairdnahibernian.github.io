@@ -12,6 +12,7 @@
 
 some __bold__ text   
 some *italic* text
+some _*bolditalic_* text
 
 bullet list:
 * item one
