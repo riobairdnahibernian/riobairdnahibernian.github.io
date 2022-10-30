@@ -1,3 +1,3 @@
 ## Contact
 
-This is the contact page. content to come.
+To contact us, please email info@TCfSI.org
