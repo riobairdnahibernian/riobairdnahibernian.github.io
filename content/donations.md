@@ -16,6 +16,8 @@ But here at the Center for Sympathetic Intelligence we imagine:
 
 Please consider donating to our mission - we are a Not For Profit Charity registered with the NY State - this means you can use your generosity to reduce your tax imprint and know that your donation will go to funding the Center and its Mission. 
 
-For more information please visit the Mission Statement Page
+To make a donation visit XXXXXXX
+
+To learn more about the Center and its work, visit the Mission Page.
 
 The Center for Sympathetic Intelligence - where ##bringing depth## to life is is our mission.
