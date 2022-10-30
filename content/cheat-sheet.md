@@ -12,7 +12,9 @@
 
 some __bold__ text   
 some *italic* text
-some _*bolditalic_* text
+some ***bolditalic*** text   
+some <span style="color:red;font-style:italic;font-weight:bold">bolditalic red</span> text   
+some <span class="danger">some red text</span> **NOTE:** this style applies only on the website which has the Boostrap framework.   
 
 bullet list:
 * item one
