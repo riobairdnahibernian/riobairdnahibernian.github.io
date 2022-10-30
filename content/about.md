@@ -1,5 +1,5 @@
 ## About
-### Note: - Think we should use the term ‘Theory’ and ‘Theoretical Concept of SI’
+<H3 style="color:red;font-style:italic;font-weight:bold">Note: - Think we should use the term ‘Theory’ and ‘Theoretical Concept of SI’</H3>
 
 The Origins of Sympathetic Intelligence and The Center
 
