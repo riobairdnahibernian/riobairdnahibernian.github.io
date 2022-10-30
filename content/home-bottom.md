@@ -1,1 +1,1 @@
-home-bottom.md Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a suscipit lorem. Pellentesque commodo sit amet neque sed luctus. Quisque pretium diam pharetra tellus sollicitudin ultrices. Nunc scelerisque non risus et feugiat. Nunc non volutpat diam, in consectetur mi. Donec semper et elit sed gravida. Proin sit amet bibendum sapien. Sed hendrerit ante nec tincidunt vehicula. Cras accumsan laoreet tincidunt.
+To learn more about the concept and the theory behind it, visit the Concept Section of this site.
