@@ -15,7 +15,7 @@ html, body{
     background-color: #ff0055;
     border-color: #ff0055;
 }
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .nav-link.active span, .navbar-light .navbar-nav .show>.nav-link span{
     color: rgba(0,0,0,.9);
     border-bottom: #a4df53 0.25em solid;
 }
