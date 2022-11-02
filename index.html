@@ -38,17 +38,22 @@
 
 
 				    <div class="si-concept">
-				    	<div id="si_home"><h1 class="pt-5 ms-5">Sympathetic Intelligence</h1></div>
+				    	<div id="si_home" class="pt-4">
+				    		<div class="pt-5 ms-5 mt-2">
+					    		<h1>Sympathetic Intelligence</h1>
+					    		<h4>A Socio-Neurological phenomenon</h4>
+				    		</div>
+				    	</div>
 
 				    	<div class="row"> <!--  d-flex flex-column min-vh-100 justify-content-center align-items-center -->
 						    
 						    <div class="col-lg"><svg id="concept"></svg></div>
-								<div class="col-lg-5 d-none">
+								<div class="col-lg-5 pe-5 d-none">
+									<h3>
+										Tier 1 – Intrapersonal
+									</h3>
 									<p>
-										Sympathetic Intelligence – A Socio Neurological Phenomenon 
-									</p>
-									<p>
-										Tier 1 – Intrapersonal: Sympathetic Intelligence at the individual level, relies on the 3
+									Sympathetic Intelligence at the individual level, relies on the 3
 									primary intelligence faculties of Gut, Mind and Heart. The SI sense and response
 									capacity is determined by the brain’s capacity to integrate these three primary
 									intelligences into one simultaneous behavior. Using this Executive capability we
@@ -61,7 +66,7 @@
 								</div>
 						</div>
 
-				      <!-- <div id="circles2"></div> -->
+				     <!--  <div id="circles2"></div> -->
 				    </div>
 	
 
@@ -77,87 +82,31 @@
     <!-- markdown parser -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <!-- split screen -->
-    <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
+<!--     <script src="https://unpkg.com/split.js/dist/split.min.js"></script> -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script type="text/javascript">
-    	// https://observablehq.com/@mbostock/polar-clock@142
-			
-			var colors = ["#fee201","#a4df53","#268fcc"]
-			var width = 500
-			var height = width
-			var radius = width / 2.2
-			var fields=
-				[
-				  {radius: 0.1 * radius},
-				  {radius: 0.2 * radius},
-				  {radius: 0.3 * radius},
-				  {radius: 0.4 * radius},
-				  {radius: 0.5 * radius},
-				  {radius: 0.6 * radius},
-				  {radius: 0.7 * radius},
-				  {radius: 0.8 * radius},
-				  {radius: 0.9 * radius}
-				]
-		  const svg = d3.select("svg")
-		      .attr("viewBox", [0, 0, width, height])
-		      .attr("text-anchor", "middle")
-		      .style("display", "block")
-		      .style("font", "500 14px var(--sans-serif)");
-
-		  const field = svg.append("g")
-		      .attr("transform", `translate(${width / 2},${height / 2})`)
-			    .selectAll("g")
-			    .data(fields)
-			    .join("g")
-			    .lower();
-
-		  field.append("circle")
-		      .attr("fill", function(d,i){
-		      	let idx = Math.floor(i/3)
-		      	return colors[idx]
-		      })
-		      .attr("stroke", function(d,i){
-		      	let idx = Math.floor(i/3)
-		      	// return colors[idx]
-		      	return "#fff"
-		      })
-		      .attr("stroke-width", 1)
-		      .attr("r", function(d,i){
-		      	console.log(i)
-		      	return d.radius
-		      } );	  
-			  
-			
-
-
-			
-	
-
-			
-
-
-    </script>
+    
 
     <script>
  
-	$(function() {
+		$(function() {
 
-		
-		// $.ajax({
-		// 	url: "content/si-home.md",
-		// 	cache: false
-		// })
-		// .done(function( html ) {
-		// 	$( "#si_home" ).html( marked.parse(html) );
-		// });
+			const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+			const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+			// $.ajax({
+			// 	url: "content/si-home.md",
+			// 	cache: false
+			// })
+			// .done(function( html ) {
+			// 	$( "#si_home" ).html( marked.parse(html) );
+			// });
 
-		$.ajax({
-			url: "content/csi-home.md",
-			cache: false
-		})
-		.done(function( html ) {
-			$( "#csi_home" ).append( marked.parse(html) );
-		});
+			$.ajax({
+				url: "content/csi-home.md",
+				cache: false
+			})
+			.done(function( html ) {
+				$( "#csi_home" ).append( marked.parse(html) );
+			});
 
 		
 		
@@ -256,12 +205,15 @@
 			$("#si_home h1").removeClass("pt-5").removeClass("ms-5")
 			$("#si_home h1").css({"text-align": "center"})
 			$(".si-concept .row .col-lg-5").removeClass("d-none");
+
+			$("#si_home").removeClass("pt-4")
+			$("#si_home div").removeClass("pt-5").removeClass("ms-5").removeClass("mt-2")
 		}
 
 		// Split(['.si-center', '.si-concept']);
 
 	});
 	</script>
-
+	<script src="/scripts/si-circles.js"></script>
   </body>
 </html>

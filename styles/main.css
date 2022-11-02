@@ -44,7 +44,11 @@ html, body{
 	width: 100%;
 }
 circle{
-	opacity: 40%;
+	/*opacity: 40%;*/
+	transition: all .2s ease-in-out;
+}
+circle:focus{
+	outline: none;
 }
 .content {
   width: 100%;
@@ -99,7 +103,7 @@ circle{
 }
 
 #csi_home{
-	padding-top: 120px;
+	padding-top: 3rem;
 }
 
 /*#si_home{
