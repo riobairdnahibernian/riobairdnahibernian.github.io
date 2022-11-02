@@ -57,7 +57,7 @@ field.append("circle")
 
 const fieldTick = field.selectAll("g")
 	.data(d => {
-        d.range = [1,2,3,4]
+        d.range = [1,2,3,4,5,6,7,8,9,10,11,12]
         return d.range.map(t => ({time: 1, field: d}));
       })
     .join("g")
@@ -66,14 +66,15 @@ const fieldTick = field.selectAll("g")
 		// const angle = i / d.field.range.length * 2 * Math.PI - Math.PI / 2;
 		const angle = i / 12 * 2 * Math.PI - Math.PI / 2;
 		return `translate(${Math.cos(angle) * d.field.radius},${Math.sin(angle) * d.field.radius})`;
-	});
+	})
+	.style("transition", "transform 500ms ease");
 
 
 const fieldCircle = fieldTick.append("circle")
 	.attr("r", dotRadius)
 	.attr("fill", "white")
 	.attr("opacity",0)
-	.style("transition", "fill 750ms ease-out");
+    .style("transition", "transform 500ms ease");
 
 
 
@@ -84,10 +85,35 @@ const fieldCircle = fieldTick.append("circle")
 
 
 field.on("mouseover", function(event,d){
-	// d3.select(this).selectAll("circle").style("opacity", "100%");
 	_class = ".tier_"+d["tier"]
 	d3.selectAll(_class).style("opacity", "100%");
 	d3.select(this).selectAll(".field-tick").selectAll("circle").style("opacity", "100%");
+
+	// d3.select(this).selectAll(".field-tick").selectAll("circle") // little circles
+	// update the position of the field ticks by rotating using interval 
+	// fieldFocus.attr("transform", d => `rotate(${(d.index / d.range.length + d.cycle) * 360})`);
+	
+	/*
+	let ticker = d3.select(this).selectAll(".field-tick")
+	let count = 0
+
+	let update = function(e){
+
+		const angle = count / 144 * 2 * Math.PI - Math.PI / 2;
+		ticker.attr("transform", `translate(${Math.cos(angle) * d.radius},${Math.sin(angle) * d.radius})`)
+
+		count++
+		
+		if (count > 144){
+			console.log("stop")
+			timer.stop()
+		}
+                
+	}
+	
+	var timer = d3.interval(update, 100 );
+	*/
+
 
 }).on("mouseout",function(event,d){
 	// d3.select(this).selectAll("circle").style("opacity", "40%");
