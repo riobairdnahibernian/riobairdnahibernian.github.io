@@ -1,6 +1,6 @@
 ## About
 
-<H3 style="color:red;font-style:italic;font-weight:bold">The Origins of Sympathetic Intelligence and The Center</H3>
+<H3 style="color:green;font-style:italic;font-weight:bold">The Origins of Sympathetic Intelligence and The Center</H3>
 
 The establishment of the Center, began when the Provost and Interim President at the State University of NY in Albany, Dr. James Stellar noticed that one of the instructors at the University, Robert Hamilton appeared to be having a significant impact on his students enrolled at the College. During a conversation Dr. Stellar told Mr. Hamilton that he believed the instructor was doing something very different and asked him what that might be. “If I am doing anything different, it is what I call Sympathetic Intelligence”. As a Neuroscientist, Robert’s response was very intriguing to Dr. Stellar and he insisted they discuss it further.
 
