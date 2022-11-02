@@ -5,7 +5,7 @@ Idea - Mission of the center is to become a research & resource center
 The Premise of Sympathetic Intelligence
 [Idea - 13 May, 2022]
 We believe that sympathetic intelligence is a central component of our existence. It goes to the very essence of what it means to be human and it governs how we behave in our every day lives.
-We further believe that a better understanding of it and it’s operation with an awareness generally for existence can significantly improve the quality of how we live how we learn and how we work together.
+We further believe that a better understanding of it and it’s operation with an awareness generally for its existence can significantly improve the quality of how we live how we learn and how we work together.
 
 As has been shown, we have arrived here today through the observance of performance and anecdotal reasoning. We now know that the phenomenon of Sympathetic Intelligence exists, we have a term for it and we believe we understand how it operates with other intelligence capabilities, such as our Instinct, Intuition, Cognition, Emotional Intelligence and what we have termed, Empathetic Intelligence.
 
