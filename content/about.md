@@ -1,9 +1,6 @@
 ## About
-<H3 style="color:red;font-style:italic;font-weight:bold">Note: - Think we should use the term ‘Theory’ and ‘Theoretical Concept of SI’</H3>
 
 The Origins of Sympathetic Intelligence and The Center
-
-No-one at The Center believes that we have invented or discovered something new. Sympathetic Intelligence has been with mankind since the beginning. Here we are in a similar position to Newton when he introduced us all to Gravity – he couldn’t claim to have either created or invented it – and nor can we.
 
 The establishment of the Center, began when the Provost and Interim President at the State University of NY in Albany, Dr. James Stellar noticed that one of the instructors at the University, Robert Hamilton appeared to be having a significant impact on his students enrolled at the College. During a conversation Dr. Stellar told Mr. Hamilton that he believed the instructor was doing something very different and asked him what that might be. “If I am doing anything different, it is what I call Sympathetic Intelligence”. As a Neuroscientist, Robert’s response was very intriguing to Dr. Stellar and he insisted they discuss it further.
 
@@ -19,3 +16,5 @@ In 2001, Robert entered University College Dublin and spent three years studying
 
 Dr. Stellar and Robert were joined in writing about their common passion for Education by Emily Barrett which resulted in a series of articles that examined the various component parts of the modern University Environment. Sympathetic Intelligence was very much at the center of those pieces. Eventually they decided to form a committee, inviting Daniel Webster, Hadi Salavitabar and Ian MacDonald to join them in forming The Center. These six people presently form the Board of Directors for the Center, which is a Legally incorporated Not For Profit Entity with the State of New York.
 
+No-one at The Center believes that we have invented or discovered something new. Sympathetic Intelligence has been with mankind since the beginning. Here we are in a similar position to Newton when he introduced us all to Gravity – he couldn’t claim to have either created or invented it – and nor can we.
+<H3 style="color:red;font-style:italic;font-weight:bold">Note: - Think we should use the term ‘Theory’ and ‘Theoretical Concept of SI’</H3>
