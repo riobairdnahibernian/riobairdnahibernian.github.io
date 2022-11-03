@@ -67,6 +67,7 @@ circle:focus{
   paint-order: stroke;
   font-weight: 600;
   text-transform: uppercase;
+  font-size: xx-large;
 }
 .tier-icon{
 	background-repeat: no-repeat;
