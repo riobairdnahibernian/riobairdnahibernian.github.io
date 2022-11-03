@@ -27,58 +27,49 @@
   </head>
   <body class="home">
 
-	    
-				    
-				    <div class="text-center si-center min-vh-100">
-					    <div id="csi_home">
-				      	<a href="/center-home.html"><img id="csi_logo" src="/images/center-logo.svg"></a>
-				      </div>
-				      <div id="csi_tab"></div>
-						</div>
+    <div class="text-center si-center min-vh-100">
+	    <div id="csi_home">
+      	<a href="/center-home.html"><img id="csi_logo" src="/images/center-logo.svg"></a>
+      </div>
+      <div id="csi_tab"></div>
+		</div>
 
 
-				    <div class="si-concept">
-				    	<div id="si_home" class="pt-4">
-				    		<div class="pt-5 ms-5 mt-2">
-					    		<h1>Sympathetic Intelligence</h1>
-					    		<h4>A Socio-Neurological phenomenon</h4>
-					    		<div class="row"> <!--  d-flex flex-column min-vh-100 justify-content-center align-items-center -->
-								    <div class="col-lg"><svg id="concept"></svg></div>
-										<div class="col-lg-5 pe-5 position-relative d-none">
-											<div class="position-absolute top-0 start-0 tier-icon tier-icon-1"></div>
-											
-											<div id="tier_text">
-												<h3>
-													Tier 1 – Intrapersonal
-												</h3>
-												<p>
-												Sympathetic Intelligence at the individual level, relies on the 3
-												primary intelligence faculties of Gut, Mind and Heart. The SI sense and response
-												capacity is determined by the brain’s capacity to integrate these three primary
-												intelligences into one simultaneous behavior. Using this Executive capability we
-												process stimuli prompted senses and convert them into feelings that are either
-												instinctual, cognitive or emotional, which we then rely upon to respond in a cohesive
-												manner that is In Sympathy with the context of our surroundings. The integration is
-												seamless, spontaneous and continual and focused on returning behavior that is
-												appropriate and assures life quality on a continuum from survival to optimal.
-												</p>	
-											</div>
-											
-										</div>
-									</div>
-				    		</div>
-				    	</div>
-
-				    	
-
-				     <!--  <div id="circles2"></div> -->
+    <div class="si-concept">
+    	<div id="si_home" class="pt-4">
+    		<div class="ms-5">
+    			<div class="justify-content-center">
+		    		<h2 class="outline-text">DEPTHFULLNESS</h2>
+		    	</div>
+    			<div class="d-flex flex-lg-row">
+    				<div class="flex-shrink-1 me-4">
+			    		<h1>Sympathetic Intelligence</h1>
+			    		<h4>A Socio-Neurological phenomenon</h4>
+			    	</div>
+			    	<!-- depthfulness col -->
+		    	</div>
+	    		<div class="row"> <!--  d-flex flex-column min-vh-100 justify-content-center align-items-center -->
+				    <div class="col-lg">
+				    	<!-- <div class="tier-label">LABEL</div> -->
+				    	<svg id="concept"></svg>
 				    </div>
+						<div class="col-lg-5 pe-5 position-relative d-none">
+							<div class="position-absolute top-0 start-0 tier-icon tier-icon-1"></div>
+							
+							<div id="tier_text">
+								
+							</div>
+							
+						</div>
+					</div>
+    		</div>
+    	</div>
+
+    	
+
+     <!--  <div id="circles2"></div> -->
+    </div>
 	
-
-
-
-    
-
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -89,7 +80,8 @@
     <!-- split screen -->
 <!--     <script src="https://unpkg.com/split.js/dist/split.min.js"></script> -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    
+    <script src="https://unpkg.com/d3-arrow@0.0.25/dist/d3-arrow.min.js"></script>
+
 
     <script>
  
@@ -216,11 +208,12 @@
 		var doc_w = $(document).outerWidth();
 		if (doc_w <= 992) {
 			$("#si_home h1").removeClass("pt-5").removeClass("ms-5")
-			$("#si_home h1").css({"text-align": "center"})
 			$(".si-concept .row .col-lg-5").removeClass("d-none");
 
 			$("#si_home").removeClass("pt-4")
 			$("#si_home div").removeClass("pt-5").removeClass("ms-5").removeClass("mt-2")
+
+			$(".outline-text").css({"font-size":"2.5em"})
 		}
 
 		// Split(['.si-center', '.si-concept']);

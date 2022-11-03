@@ -1,11 +1,11 @@
- style */
+/* style */
 
 html, body{
 	font-family: acumin-pro, sans-serif;
 	font-weight: 300;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-weight: 200;
+    font-weight: 100;
 }
 .h2, h2{
 	color: #268fcc;
@@ -43,13 +43,6 @@ html, body{
 #concept{
 	width: 100%;
 }
-circle{
-	/*opacity: 40%;*/
-	transition: all .2s ease-in-out;
-}
-circle:focus{
-	outline: none;
-}
 .content {
   width: 100%;
   height: 100%;
@@ -58,6 +51,23 @@ circle:focus{
   align-items: center;
 }
 
+circle{
+	/*opacity: 40%;*/
+	transition: all .2s ease-in-out;
+}
+circle:focus{
+	outline: none;
+}
+
+.tier_label{
+	fill: none;
+  stroke: white;
+  stroke-width: 0.5px;
+  stroke-linejoin: round;
+  paint-order: stroke;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 .tier-icon{
 	background-repeat: no-repeat;
   background-size: 50px;
@@ -74,8 +84,21 @@ circle:focus{
 .tier-icon-3{
 	background-image: url(../images/tier3-sm.svg);
 }
+.outline-text{
+	font-weight: 600;
+	font-size: 4em;
+	color: #fff;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+  opacity: .5;
+}
 
-
+#donate-button-container{
+	  margin-bottom: -50px;
+    background-color: #a4df53;
+    padding: 50px;
+}
 .split {
   width: 100%;
   height:100%;

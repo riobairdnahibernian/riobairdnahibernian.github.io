@@ -1,3 +1,5 @@
+
+
 var colors = ["#fee201","#a4df53","#390052"]
 var width = 500
 var height = width
@@ -21,6 +23,14 @@ const svg = d3.select("svg")
 	.style("display", "block")
 	.style("font", "500 14px var(--sans-serif)");
 
+
+svg.append("text")
+	.text("")
+	.attr("x", `${width / 2}`)
+	.attr("y", 35)
+	.attr("class","tier_label");
+
+
 const field = svg.append("g")
 	.attr("transform", `translate(${width / 2},${height / 2})`)
 	.selectAll("g")
@@ -43,11 +53,11 @@ field.append("circle")
 	.attr("r", function(d,i){
 		return d.radius
 	})
-	.attr("data-bs-toggle","tooltip")
-	.attr("data-bs-placement","top")
-	.attr("data-bs-title", function(d,i){
-		return d['label'];
-	})
+	// .attr("data-bs-toggle","tooltip")
+	// .attr("data-bs-placement","top")
+	// .attr("data-bs-title", function(d,i){
+	// 	return d['label'];
+	// })
 	.attr("class", function(d,i){
 		return "tier_"+d["tier"]
 	});	  
@@ -57,14 +67,14 @@ field.append("circle")
 
 const fieldTick = field.selectAll("g")
 	.data(d => {
-        d.range = [1,2,3,4,5,6,7,8,9,10,11,12]
+        d.range = [1,2,3,4,5,6,7,8,9,10,11]
         return d.range.map(t => ({time: 1, field: d}));
       })
     .join("g")
 	.attr("class", "field-tick")
 	.attr("transform", (d, i) => {
 		// const angle = i / d.field.range.length * 2 * Math.PI - Math.PI / 2;
-		const angle = i / 12 * 2 * Math.PI - Math.PI / 2;
+		const angle = (i+1) / 12 * 2 * Math.PI - Math.PI / 2;
 		return `translate(${Math.cos(angle) * d.field.radius},${Math.sin(angle) * d.field.radius})`;
 	})
 	.style("transition", "transform 500ms ease");
@@ -77,8 +87,31 @@ const fieldCircle = fieldTick.append("circle")
     .style("transition", "transform 500ms ease");
 
 
+// Making a line Generator
+var LineGenerator = d3.line();
+var points = [
+    [`${width / 2}`,40],
+    [`${width / 2}`,35]
+];
+
+var pathOfLine = LineGenerator(points);
 
 
+const arrow = d3.arrow1()
+	.id("my-arrow")
+    .attr("fill", "white")
+    .attr("stroke", "white");
+
+
+
+svg.append('path')
+	.attr("fill","none")
+	.attr("stroke","#ffffff")
+	.attr("stroke-width",.75)
+	.attr("marker-end", "url(#my-arrow)")
+    .attr('d', pathOfLine);
+
+svg.call(arrow);
 
 field.on("click", function(event,d){
 	removeCls = ["tier-icon-1","tier-icon-2","tier-icon-3"]
@@ -107,6 +140,38 @@ field.on("mouseover", function(event,d){
 	_class = ".tier_"+d["tier"]
 	d3.selectAll(_class).style("opacity", "100%");
 	d3.select(this).selectAll(".field-tick").selectAll("circle").style("opacity", "100%");
+
+	d3.select(".tier_label").text(d["label"])
+
+
+	d3.select("path")
+		.attr('d',LineGenerator([[`${width / 2}`,`${height / 2}`-d["radius"]],[`${width / 2}`,40]]))
+		
+
+
+	// removeCls = ["tier-icon-1","tier-icon-2","tier-icon-3"]
+	// addCls = "tier-icon-"+d["tier"]
+
+	// let t = d["tier"]
+	// console.log("t",t)
+
+	// let h_child = t+t-1-1
+	// let p_child = t+t-1
+
+	// console.log("h_child,p_child",h_child,p_child)
+
+	// $(".tier-icon").removeClass(removeCls).addClass(addCls)
+
+	// $("#tier_text h3, #tier_text p").addClass("d-none")
+
+	// $("#tier_text :eq("+h_child+")").removeClass("d-none")
+	// $("#tier_text :eq("+p_child+")").removeClass("d-none")
+
+
+
+
+
+
 
 	// d3.select(this).selectAll(".field-tick").selectAll("circle") // little circles
 	// update the position of the field ticks by rotating using interval 
@@ -139,4 +204,5 @@ field.on("mouseover", function(event,d){
 	_class = ".tier_"+d["tier"]
 	d3.selectAll(_class).style("opacity", "40%");
 	d3.select(this).selectAll(".field-tick").selectAll("circle").style("opacity", "0%");
+	d3.select(".tier_label").text("")
 })
