@@ -80,7 +80,26 @@ const fieldCircle = fieldTick.append("circle")
 
 
 
+field.on("click", function(event,d){
+	removeCls = ["tier-icon-1","tier-icon-2","tier-icon-3"]
+	addCls = "tier-icon-"+d["tier"]
 
+	let t = d["tier"]
+	console.log("t",t)
+
+	let h_child = t+t-1-1
+	let p_child = t+t-1
+
+	console.log("h_child,p_child",h_child,p_child)
+
+	$(".tier-icon").removeClass(removeCls).addClass(addCls)
+
+	$("#tier_text h3, #tier_text p").addClass("d-none")
+
+	$("#tier_text :eq("+h_child+")").removeClass("d-none")
+	$("#tier_text :eq("+p_child+")").removeClass("d-none")
+
+})
 
 
 
