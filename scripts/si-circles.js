@@ -8,8 +8,8 @@ var dotRadius = width * .01
 var fields=
 	[
 	  {radius: 0.1 * radius, label:"gut", tier:1},
-	  {radius: 0.2 * radius, label:"heart", tier:1},
-	  {radius: 0.3 * radius, label:"mind", tier:1},
+	  {radius: 0.2 * radius, label:"mind", tier:1},
+	  {radius: 0.3 * radius, label:"heart", tier:1},
 	  {radius: 0.4 * radius, label:"match", tier:2},
 	  {radius: 0.5 * radius, label:"connect", tier:2},
 	  {radius: 0.6 * radius, label:"bond", tier:2},
@@ -113,18 +113,20 @@ svg.append('path')
 
 svg.call(arrow);
 
+var activeTier = 0
+
 field.on("click", function(event,d){
-	removeCls = ["tier-icon-1","tier-icon-2","tier-icon-3"]
-	addCls = "tier-icon-"+d["tier"]
+	// sets the active tier to the current tier
 
-	let t = d["tier"]
-	console.log("t",t)
+	let removeCls = ["tier-icon-1","tier-icon-2","tier-icon-3"]
+	let addCls = "tier-icon-"+d["tier"]
+	
+	activeTier = d["tier"]
 
-	let h_child = t+t-1-1
-	let p_child = t+t-1
+	let h_child = 2*activeTier-2
+	let p_child = 2*activeTier-1
 
-	console.log("h_child,p_child",h_child,p_child)
-
+	$(".tier-icon").removeClass("d-none")
 	$(".tier-icon").removeClass(removeCls).addClass(addCls)
 
 	$("#tier_text h3, #tier_text p").addClass("d-none")
@@ -132,77 +134,113 @@ field.on("click", function(event,d){
 	$("#tier_text :eq("+h_child+")").removeClass("d-none")
 	$("#tier_text :eq("+p_child+")").removeClass("d-none")
 
+	// people icons
+	$(".tier-graphics").addClass("tier-graphics-"+activeTier)
+
 })
 
 
 
 field.on("mouseover", function(event,d){
-	_class = ".tier_"+d["tier"]
-	d3.selectAll(_class).style("opacity", "100%");
+
+	let currTier = d["tier"]
+	// remove all highlights - resets everything
+
+	d3.selectAll(".tier_1").style("opacity", "40%"); 
+	d3.selectAll(".tier_2").style("opacity", "40%");
+	d3.selectAll(".tier_3").style("opacity", "40%");// all big circles at 40% opacity
+	d3.select(this).selectAll(".field-tick").selectAll("circle").style("opacity", "0%"); // all small circles hidden
+	d3.select(".tier_label").text("") // all label text hidden
+	
+	let points = [
+	    [`${width / 2}`,40],
+	    [`${width / 2}`,35]
+	];
+	d3.select("path")
+		.attr('d',LineGenerator(points)) // path hidden
+
+	// people icons
+	$(".tier-graphics").removeClass(["tier-graphics-1","tier-graphics-2","tier-graphics-3"])
+	$(".tier-graphics").addClass("tier-graphics-"+currTier)
+	
+	// highlight only current items
+
+
+
+	d3.selectAll(".tier_"+currTier).style("opacity", "100%");
 	d3.select(this).selectAll(".field-tick").selectAll("circle").style("opacity", "100%");
 
 	d3.select(".tier_label").text(d["label"])
 
-
 	d3.select("path")
 		.attr('d',LineGenerator([[`${width / 2}`,`${height / 2}`-d["radius"]],[`${width / 2}`,40]]))
 		
-
-
-	// removeCls = ["tier-icon-1","tier-icon-2","tier-icon-3"]
-	// addCls = "tier-icon-"+d["tier"]
-
-	// let t = d["tier"]
-	// console.log("t",t)
-
-	// let h_child = t+t-1-1
-	// let p_child = t+t-1
-
-	// console.log("h_child,p_child",h_child,p_child)
-
-	// $(".tier-icon").removeClass(removeCls).addClass(addCls)
-
-	// $("#tier_text h3, #tier_text p").addClass("d-none")
-
-	// $("#tier_text :eq("+h_child+")").removeClass("d-none")
-	// $("#tier_text :eq("+p_child+")").removeClass("d-none")
-
-
-
-
-
-
-
-	// d3.select(this).selectAll(".field-tick").selectAll("circle") // little circles
-	// update the position of the field ticks by rotating using interval 
-	// fieldFocus.attr("transform", d => `rotate(${(d.index / d.range.length + d.cycle) * 360})`);
-	
-	/*
-	let ticker = d3.select(this).selectAll(".field-tick")
-	let count = 0
-
-	let update = function(e){
-
-		const angle = count / 144 * 2 * Math.PI - Math.PI / 2;
-		ticker.attr("transform", `translate(${Math.cos(angle) * d.radius},${Math.sin(angle) * d.radius})`)
-
-		count++
+	// tier-icons
+	let removeCls = ["tier-icon-1","tier-icon-2","tier-icon-3"]
+	let addCls = "tier-icon-"+currTier
 		
-		if (count > 144){
-			console.log("stop")
-			timer.stop()
-		}
-                
-	}
-	
-	var timer = d3.interval(update, 100 );
-	*/
+	let t = d["tier"]
+	let h_child = 2*t-2
+	let p_child = 2*t-1
 
+
+	$(".tier-icon").removeClass("d-none")
+	$(".tier-icon").removeClass(removeCls).addClass(addCls)
+
+	$("#tier_text h3, #tier_text p").addClass("d-none")
+
+	$("#tier_text :eq("+h_child+")").removeClass("d-none")
+	$("#tier_text :eq("+p_child+")").removeClass("d-none")
+	// end tier icons
+
+	
+	
 
 }).on("mouseout",function(event,d){
-	// d3.select(this).selectAll("circle").style("opacity", "40%");
-	_class = ".tier_"+d["tier"]
-	d3.selectAll(_class).style("opacity", "40%");
-	d3.select(this).selectAll(".field-tick").selectAll("circle").style("opacity", "0%");
-	d3.select(".tier_label").text("")
+	// remove all highlights - resets everything
+	d3.selectAll(".tier_1").style("opacity", "40%"); 
+	d3.selectAll(".tier_2").style("opacity", "40%");
+	d3.selectAll(".tier_3").style("opacity", "40%");// all big circles at 40% opacity
+	d3.select(this).selectAll(".field-tick").selectAll("circle").style("opacity", "0%"); // all small circles hidden
+	d3.select(".tier_label").text("") // all label text hidden
+	
+	let points = [
+	    [`${width / 2}`,40],
+	    [`${width / 2}`,35]
+	];
+	d3.select("path")
+		.attr('d',LineGenerator(points)) // path hidden
+
+	// highlight only active items
+	
+	// people icons
+	$(".tier-graphics").removeClass(["tier-graphics-1","tier-graphics-2","tier-graphics-3"])
+	// $(".tier-graphics").removeClass()
+	$(".tier-graphics").addClass("tier-graphics-"+activeTier)
+
+	d3.selectAll(".tier_"+activeTier).style("opacity", "100%");
+
+	let removeCls = ["tier-icon-1","tier-icon-2","tier-icon-3"]
+	let addCls = "tier-icon-"+activeTier
+	
+	let h_child = 2*activeTier-2
+	let p_child = 2*activeTier-1
+
+
+	$(".tier-icon").removeClass("d-none")
+	$(".tier-icon").removeClass(removeCls).addClass(addCls)
+
+	$("#tier_text h3, #tier_text p").addClass("d-none")
+
+	// a bit of a hack to remove some weird behavior where
+	// tier 3 doesn't get its classes removed. 
+	if(activeTier>0){
+		$("#tier_text :eq("+h_child+")").removeClass("d-none")
+		$("#tier_text :eq("+p_child+")").removeClass("d-none")
+	}
+	
+
+
 })
+
+

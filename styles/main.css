@@ -52,7 +52,7 @@ html, body{
 }
 
 circle{
-	/*opacity: 40%;*/
+	cursor: pointer;
 	transition: all .2s ease-in-out;
 }
 circle:focus{
@@ -93,6 +93,26 @@ circle:focus{
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px;
   opacity: .5;
+}
+.tier-graphics{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
+}
+.tier-graphics.tier-graphics-3{
+	background-image: url(../images/crowd.svg);
+  height: 450px;
+  width: 90%;
+}
+.tier-graphics.tier-graphics-2{
+	background-image: url(../images/couple.svg);
+  height: 200px;
+  width: 200px;
+}
+.tier-graphics.tier-graphics-1{
+	background-image: url(../images/girl.svg);
+  height: 200px;
+  width: 100px;
 }
 
 #donate-button-container{

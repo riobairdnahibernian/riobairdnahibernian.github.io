@@ -54,11 +54,14 @@
 				    	<svg id="concept"></svg>
 				    </div>
 						<div class="col-lg-5 pe-5 position-relative d-none">
-							<div class="position-absolute top-0 start-0 tier-icon tier-icon-1"></div>
+							<div class="position-absolute top-0 start-0 tier-icon tier-icon-1 d-none"></div>
 							
 							<div id="tier_text">
-								
+								<!-- tiers.md -->
 							</div>
+							<div class="tier-graphics">
+							</div>
+						
 							
 						</div>
 					</div>
@@ -84,8 +87,10 @@
 
 
     <script>
- 
+ 		
 		$(function() {
+
+
 
 			const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 			const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
@@ -111,6 +116,7 @@
 			})
 			.done(function( html ) {
 				$( "#tier_text" ).html( marked.parse(html) );
+				$("#tier_text h3, #tier_text p").addClass("d-none")
 			});
 
 		
@@ -205,10 +211,12 @@
 			}
 		})
 
+		// mobile view
 		var doc_w = $(document).outerWidth();
 		if (doc_w <= 992) {
 			$("#si_home h1").removeClass("pt-5").removeClass("ms-5")
 			$(".si-concept .row .col-lg-5").removeClass("d-none");
+			$("#tier_text h3, #tier_text p").removeClass("d-none")
 
 			$("#si_home").removeClass("pt-4")
 			$("#si_home div").removeClass("pt-5").removeClass("ms-5").removeClass("mt-2")
@@ -217,6 +225,7 @@
 		}
 
 		// Split(['.si-center', '.si-concept']);
+
 
 	});
 	</script>
