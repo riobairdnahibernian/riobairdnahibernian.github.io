@@ -168,9 +168,9 @@ circle:focus{
 	padding-top: 3rem;
 }
 
-/*#si_home{
-    padding-top: 210px;
-}*/
+#si_home{
+	margin-top: -25px;
+}
 
 #csi_logo{
 	margin-bottom: 20px;

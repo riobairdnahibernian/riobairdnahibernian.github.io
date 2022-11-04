@@ -36,6 +36,9 @@ body{
 	-o-background-size: cover;
 	background-size: cover;
 }
+.si-concept .navbar{
+	min-height: unset;
+}
 .navbar-brand{
 	font-size: xx-large;
     font-weight: 100;
