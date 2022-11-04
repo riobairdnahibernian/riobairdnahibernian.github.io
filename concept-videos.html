@@ -14,7 +14,7 @@
     <title>Sympathetic Intelligence</title>
 
   </head>
-  <body class='origins'>
+  <body class='applications'>
 		<header class="navbar navbar-expand-lg sticky-top navbar-light bg-light bd-navbar">
   		<!-- Loading header -->
   	
@@ -25,17 +25,28 @@
 			<div class="row">
 
 				<div class="col-lg-3 tier-1-concert pt-5">
-					<img src="images/drummer.svg"/>
+					
 				</div>
 
 				<div class="col-lg-5 inner-main-content">
-					<div class="main-content"></div>
-					<div class="sencondary-content"></div>
-						<!-- loading markdown content with ajax -->
+					<div class="main-content"><!-- loading markdown content with ajax --></div>
+					<div class="sencondary-content"><!-- loading markdown content with ajax --></div>
+					<div class="video-wrapper">
+						<div class="video-container">
+							<iframe src="https://www.youtube.com/embed/NmiwAV9i5cY?title=0&byline=0&portrait=0" width="800" height="450" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+					<p>What do we mean by "Sympathy"?</p>
+					<div class="video-wrapper">
+						<div class="video-container">
+							<iframe src="https://www.youtube.com/embed/q2bykgueC1I?title=0&byline=0&portrait=0" width="800" height="450" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+					<p>Why is the Center Affiliated with SOS</p>	
 				</div>
 
 				<div class="col-lg-4 p-5 mt-5">
-					<img src="images/musicians.svg" alt="musicians"/>
+					
 				</div>
 
 			</div><!-- row -->
@@ -54,7 +65,7 @@
     	$(function() {
 
 	    	$.ajax({
-					url: "/content/concept-origins.md",
+					url: "/content/concept-videos.md",
 					cache: false
 				})
 				.done(function( html ) {
