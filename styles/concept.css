@@ -1,0 +1,88 @@
+/* concept styles */
+
+html{
+	background: url("../images/bg-gradient.svg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	shape-renderer: crispEdges;
+}
+body{
+	background-color: transparent;
+	color: #fff;
+}	
+.origins{
+	background: url("../images/concert-crowd.svg") no-repeat bottom center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+.h2, h2 {
+    color: #ffffff;
+}
+.inner-main-content {
+	padding-top: calc(var(--bs-gutter-x) * 2);
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+}
+.navbar{
+	/*background-color: rgba(255, 255, 255, 0.2);*/
+	min-height: 100px;
+	background: url("../images/bg-gradient-lt.svg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.navbar-brand{
+	font-size: xx-large;
+    font-weight: 100;
+    color: #fff!important;
+}
+.sic-link{
+	position: absolute;
+	top: 5px;
+	left: 2em;
+}
+.sic-link a{
+    text-decoration: none;
+    color: #333;
+}
+
+.sic-link a::before {
+    content: url(../images/blue-triangle-left.svg);
+    width: 14px;
+    position: absolute;
+    top: 1px;
+    margin-left: -20px;
+}
+.tier-1-painter{
+	background: url("../images/tier-1-painter.svg") no-repeat top center; 
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-wrapper {
+	width: 600px;
+	max-width: 90%;
+}
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

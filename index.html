@@ -9,21 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.typekit.net/xni1pje.css">
     <link href="styles/main.css" rel="stylesheet">
-
+		<link href="styles/concept.css" rel="stylesheet">
     <title>Center for Sympathetic Intelligence</title>
-    <style type="text/css">
-    		html{
-				  background: url("../images/bg-gradient.svg") no-repeat center center fixed; 
-				  -webkit-background-size: cover;
-				  -moz-background-size: cover;
-				  -o-background-size: cover;
-				  background-size: cover;
-				  shape-renderer: crispEdges;
-				}
-				body{
-					background-color: transparent;
-				}	
-    </style>
+
   </head>
   <body class="home">
 
@@ -61,16 +49,11 @@
 							</div>
 							<div class="tier-graphics">
 							</div>
-						
-							
+							<a class="btn btn-primary" href="/concept-sn-depthfullness.html" role="button">Learn more</a>
 						</div>
 					</div>
     		</div>
     	</div>
-
-    	
-
-     <!--  <div id="circles2"></div> -->
     </div>
 	
 
@@ -80,155 +63,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- markdown parser -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <!-- split screen -->
-<!--     <script src="https://unpkg.com/split.js/dist/split.min.js"></script> -->
+
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://unpkg.com/d3-arrow@0.0.25/dist/d3-arrow.min.js"></script>
 
-
-    <script>
- 		
-		$(function() {
-
-
-
-			const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-			const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-			// $.ajax({
-			// 	url: "content/si-home.md",
-			// 	cache: false
-			// })
-			// .done(function( html ) {
-			// 	$( "#si_home" ).html( marked.parse(html) );
-			// });
-
-			$.ajax({
-				url: "content/csi-home.md",
-				cache: false
-			})
-			.done(function( html ) {
-				$( "#csi_home" ).append( marked.parse(html) );
-			});
-
-			$.ajax({
-				url: "content/tiers.md",
-				cache: false
-			})
-			.done(function( html ) {
-				$( "#tier_text" ).html( marked.parse(html) );
-				$("#tier_text h3, #tier_text p").addClass("d-none")
-			});
-
-		
-		
-		
-		
-		$(document).on("click", ".si-concept",function() {
-
-
-			var doc_w = $(document).outerWidth();
-
-			if (doc_w >= 992) {
-				var mw = $(".si-center").outerWidth();
-
-				var center_style = {
-					"margin-left":-(mw-10)+"px",
-					"transition": "all .2s ease-in-out"
-				}
-				
-				var concept_style = {
-					// "padding-left":"15%",
-					"transition": "all .2s ease-in-out",
-					"background-position-x":"-40px",
-	    		"width": "100%",
-	    		"float": "none"
-				}
-
-				var svg_style = {
-					"width":"120%",
-					// "align-self": "flex-start"
-				}
-
-				$(".si-center").css( center_style );
-				$(".si-concept").css( concept_style );
-				//$("#concept").css( svg_style );
-
-				$(".si-concept .row .col-lg-5").removeClass("d-none");
-			}
-
-		})
-
-
-		$("#csi_tab").on("click", function(){
-
-			var doc_w = $(document).outerWidth();
-			if (doc_w >= 992) {
-				var center_style = {
-					"margin-left":"0",
-					"width":"30%"
-				}
-				var concept_style = {
-					"padding-left":"0px",
-					"width":"70%",
-					"background-position-x":"-180px",
-					"float":"left"
-					
-				}
-				var svg_style = {
-					"width":"100%",
-					// "align-self": "flex-start"
-				}
-
-				$(".si-center").css(center_style);
-				$(".si-concept").css(concept_style);
-
-				$(".si-concept .row .col-lg-5").addClass("d-none");
-				//$("#concept").css( svg_style );
-			}
-
-		});
-
-
-
-		$(document).on("click", "#csi_logo",function() {
-
-			var doc_w = $(document).outerWidth();
-			if (doc_w >= 992) {
-				var mw = $(".si-center").outerWidth();
-				var center_style = {
-					"margin-left":"-20px",
-					"width":"100%",
-					"transition": "all .2s ease-in-out"
-				}
-				var concept_style = {
-					"padding-left":"15%",
-					"margin-left":(mw)+"px",
-					"transition": "all .2s ease-in-out",
-					"background-position-x":"-40px"
-				}
-				$(".si-center").css( center_style );
-				$(".si-center").css( center_style );
-			}
-		})
-
-		// mobile view
-		var doc_w = $(document).outerWidth();
-		if (doc_w <= 992) {
-			$("#si_home h1").removeClass("pt-5").removeClass("ms-5")
-			$(".si-concept .row .col-lg-5").removeClass("d-none");
-			$("#tier_text h3, #tier_text p").removeClass("d-none")
-
-			$("#si_home").removeClass("pt-4")
-			$("#si_home div").removeClass("pt-5").removeClass("ms-5").removeClass("mt-2")
-
-			$(".outline-text").css({"font-size":"2.5em"})
-		}
-
-		// Split(['.si-center', '.si-concept']);
-
-
-	});
-	</script>
-	<script src="/scripts/si-circles.js"></script>
+		<script src="/scripts/main.js"></script>
+		<script src="/scripts/si-circles.js"></script>
   </body>
 </html>
