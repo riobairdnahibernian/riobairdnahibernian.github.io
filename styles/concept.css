@@ -74,6 +74,14 @@ body{
 	background: url("../images/tier-1-painter.svg") no-repeat top center; 
 	background-size: 100%;
 }
+.tier-2-violin{
+	background: url("../images/tier-2-violin.svg") no-repeat top center; 
+	background-size: 100%;
+}
+.tier-3-crowd{
+	background: url("../images/tier-3-crowd.svg") no-repeat top center; 
+	background-size: 100%;
+}
 
 
 #nav-tier1-tab.active{

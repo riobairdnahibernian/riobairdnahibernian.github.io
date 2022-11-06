@@ -16,7 +16,7 @@
   </head>
   <body class='depthfullness'>
 		<header class="navbar navbar-expand-lg sticky-top navbar-light bg-light bd-navbar">
-  		<!-- Loading header -->
+  		<!-- concept-header.html -->
   	
   	</header>
 
@@ -24,12 +24,14 @@
 
 			<div class="row">
 
-				<div class="col-lg-3 tier-1-painter">
+				<div class="col-lg-3 tier-illustration tier-1-painter">
 					<!-- <img src="images/tier-1-painter.svg"/> -->
 				</div>
 
 				<div class="col-lg-5 inner-main-content">
-					<div class="main-content"></div>
+					<div class="main-content">
+						<!-- socio-neurological-depthfullness.md -->
+					</div>
 
 
 					<nav class="mt-5">
@@ -42,25 +44,16 @@
 					</nav>
 					<div class="tab-content pt-3" id="nav-tabContent">
 					  <div class="tab-pane fade show active" id="nav-tier1" role="tabpanel" aria-labelledby="nav-tier1-tab" tabindex="0">
-					  	<h4>Tier 1 – Intrapersonal/Within</h4>
-							<p>Sympathetic Intelligence at the individual level, relies on the 3 primary intelligence faculties of Gut, Mind and Heart. The SI sense and response capacity is determined by the brain’s capacity to integrate these three primary intelligences into one simultaneous behavior. Using this Executive capability we process stimuli prompted senses and convert them into feelings that are either instinctual, cognitive or emotional, which we then rely upon to respond in a cohesive manner that is In Sympathy with the context of our surroundings. The integration is seamless, spontaneous and continual and focused on returning behavior that is appropriate and assures life quality on a continuum from survival to optimal.</p>
-							<!-- <img src="/images/t1-placeholder.svg"> -->
+					  	<!-- tier1.md -->
 						</div>
 					  <div class="tab-pane fade" id="nav-tier2" role="tabpanel" aria-labelledby="nav-tier2-tab" tabindex="0">
-					  	<h4>Tier 2 – Interpersonal/Between</h4>
-							<p>Sympathetic Intelligence at this level is driven by a survivalist Need, Desire and Capacity to belong or be connected by the individual, but extends intelligence beyond the individual and is said to be within, between and amongst all of us. It starts with person-to-person engagement and builds to an ever-strengthening attachment with those immediately around each individual extending to a social network as we become members of groups such as partnerships, teams and communities. We first match, then connect and bond. Sympathetic Intelligence at this level becomes a multi-layered Collective phenomenon that manifests in a multitude of ways from flow states visible in teams to the vibes felt in audiences.
-							</p>
+					  	<!-- tier2.md -->
 					  </div>
 					  <div class="tab-pane fade" id="nav-tier3" role="tabpanel" aria-labelledby="nav-tier3-tab" tabindex="0">
-					  	<h4>Tier 3 – Extrapersonal/Amongst</h4>
-							<p>Sympathetic Intelligence at this level is visible in the day to day activities of societies through their cultures, conformity and compliance through common purpose, adherence to standards and norms, including the rules and laws of order necessary for a community to execute on the social contract deeply embodied in our communal existence. At this level it is not possible for it to present in collective spontaneous behavior, but can present as a sense of national pride or togetherness visible during certain special occasions. We rely on this level of Sympathetic Intelligence as we Live, Learn and Work.</p>
+					  	<!-- tier3.md -->
 					  </div>
 					</div>
 
-
-
-					<div class="sencondary-content"></div>
-						<!-- loading markdown content with ajax -->
 				</div>
 
 				<div class="col-lg-4 p-5 mt-5">
@@ -120,13 +113,19 @@
 					$( "#nav-tier3" ).html( marked.parse(html) );
 				});
 
-				// $.ajax({
-				// 	url: "/content/tiers.md",
-				// 	cache: false
-				// })
-				// .done(function( html ) {
-				// 	$( ".sencondary-content" ).append( marked.parse(html) );
-				// });
+				
+				$(document).on("click", "#nav-tab .nav-link", function(){
+					let activeTab = $(this).attr("id")
+					let t = activeTab.split("-")[1].charAt(4)
+					//.charAt(str.length-1)
+
+
+					let illustrations = ["tier-1-painter","tier-2-violin","tier-3-crowd"]
+					$(".tier-illustration").removeClass(illustrations)
+					$(".tier-illustration").addClass(illustrations[t-1])
+				})
+
+
 			});
     </script>
   </body>

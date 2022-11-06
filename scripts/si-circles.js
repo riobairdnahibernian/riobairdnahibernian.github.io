@@ -115,6 +115,8 @@ svg.call(arrow);
 
 var activeTier = 0
 
+
+
 field.on("click", function(event,d){
 	// sets the active tier to the current tier
 
@@ -136,6 +138,7 @@ field.on("click", function(event,d){
 
 	// people icons
 	$(".tier-graphics").addClass("tier-graphics-"+activeTier)
+	$(".learn-more").removeClass("d-none")
 
 })
 
