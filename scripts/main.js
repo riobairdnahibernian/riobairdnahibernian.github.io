@@ -2,6 +2,10 @@
 
 $(function() {
 
+	$(document).on("click","header a", function(e){
+		// keeps the page from sliding when a menu item is clicked
+		e.stopPropagation()
+	})
 
 	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 	const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

@@ -90,6 +90,18 @@ body{
 	color: #fff;
 }
 
+.tab-content h5{
+	font-weight: 600;
+	font-size: 3em;
+	color: #fff;
+	text-transform: uppercase;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 1px;
+	opacity: .5;
+}
+
+
+
 .inner-main-content .nav-tabs .nav-item.show #nav-tier1-tab, 
 .inner-main-content .nav-tabs #nav-tier1-tab.active {
     border-color: #fee201 #fee201 #fff;
