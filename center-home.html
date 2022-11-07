@@ -41,13 +41,13 @@
 					<h2 class="d-lg-none">Bringing depth to life</h2>
 					<div id="home_top_mobile">
 						<p class="d-lg-none">
-							<!-- home-top.md -->
+							<!-- content/center-home-top.md -->
 						</p>
 					</div>
 					
 					<a name="home_bot"></a>
 					<div id="home_bottom">
-						<!-- home-bottom.md -->
+						<!-- content/center-home-bottom.md -->
 					</div> 
 				</div>
 			</div>
@@ -70,7 +70,7 @@
     	$(function() {
 
 	    	$.ajax({
-					url: "content/home-top.md",
+					url: "/content/center-home-top.md",
 					cache: false
 				})
 				.done(function( html ) {
@@ -80,7 +80,7 @@
 				});
 
 				$.ajax({
-					url: "content/home-bottom.md",
+					url: "/content/center-home-bottom.md",
 					cache: false
 				})
 				.done(function( html ) {

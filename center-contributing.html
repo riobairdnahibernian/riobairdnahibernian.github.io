@@ -9,12 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://use.typekit.net/xni1pje.css">
-    <link href="styles/main.css" rel="stylesheet">
+    <link href="/styles/main.css" rel="stylesheet">
 
     <title>Center for Sympathetic Intelligence</title>
 
   </head>
-  <body class='bg-green inner-page donations'>
+  <body class='bg-green inner-page contributing'>
 		<header class="navbar navbar-expand-lg sticky-top navbar-light bg-light bd-navbar">
   		<p>Loading header</p>
   	</header>
@@ -26,35 +26,12 @@
 					
 				</div>
 				<div class="col-lg-6 bg-white mt-5">
-					<div id="donate-button-container" class="justify-content-center d-flex mt-2">
-						<div id="donate-button"></div>
-						<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-						<script>
-						PayPal.Donation.Button({
-						env:'production',
-						hosted_button_id:'2CEQEM5YVDZ2N',
-						image: {
-						src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
-						alt:'Donate with PayPal button',
-						title:'PayPal - The safer, easier way to pay online!',
-						}
-						}).render('#donate-button');
-						</script>
-					</div>
-
 					<div class="inner-main-content">
 						<!-- loading markdown content with ajax -->
 					</div>
 				</div>
 			</div>
-				
-
-
 		</div> <!-- container -->
-
-
-
-    
 
 
     <!-- Bootstrap Bundle with Popper -->
@@ -68,7 +45,7 @@
     	$(function() {
 
 	    	$.ajax({
-					url: "content/donations.md",
+					url: "/content/center-contributing.md",
 					cache: false
 				})
 				.done(function( html ) {

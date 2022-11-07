@@ -1,2 +1,0 @@
-# Sympathetic Intelligence
-

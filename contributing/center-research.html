@@ -14,7 +14,7 @@
     <title>Center for Sympathetic Intelligence</title>
 
   </head>
-  <body class='bg-green inner-page panels'>
+  <body class='bg-green inner-page research'>
 		<header class="navbar navbar-expand-lg sticky-top navbar-light bg-light bd-navbar">
   		<p>Loading header</p>
   	</header>
@@ -23,31 +23,15 @@
 
 			<div class="row big-image ">
 				<div class="col-lg-3 mt-5">
-					<div class="card float-lg-end d-none d-lg-block py-5 pe-5 bg-purple opacity-50">
-						<ul class="list-group list-group-flush panels-menu mb-5">
-							<li class="list-group-item bg-yellow mb-2">The Police Panel</li>
-							<li class="list-group-item bg-orange mb-2">The Education Panel</li>
-							<li class="list-group-item bg-green mb-2">The Arts Panel</li>
-							<li class="list-group-item bg-blue clr-white mb-2">The Healthcare Panel</li>
-						</ul>
-						<div class="d-flex justify-content-end"><a class="btn btn-primary" href="#" role="button">Future Panels</a></div>
-						
-					</div>
+					
 				</div>
 				<div class="col-lg-6 bg-white mt-5">
 					<div class="inner-main-content">
-						
+						<!-- /content/center-research.md -->
 					</div>
 				</div>
 			</div>
-				
-
-
 		</div> <!-- container -->
-
-
-
-    
 
 
     <!-- Bootstrap Bundle with Popper -->
@@ -58,14 +42,16 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="/scripts/scripts.js"></script>
     <script>
-    	$.ajax({
-					url: "/content/center-panels.md",
+    	$(function() {
+
+	    	$.ajax({
+					url: "/content/center-research.md",
 					cache: false
 				})
 				.done(function( html ) {
-					$(".inner-main-content").html( marked.parse(html) )
-
+					$( ".inner-main-content" ).append( marked.parse(html) );
 				});
-    </script>	
+			});
+    </script>
   </body>
 </html>
