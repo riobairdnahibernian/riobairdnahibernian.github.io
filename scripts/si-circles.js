@@ -7,9 +7,9 @@ var radius = width / 2.2
 var dotRadius = width * .01
 var fields=
 	[
-	  {radius: 0.1 * radius, label:"gut", tier:1},
-	  {radius: 0.2 * radius, label:"mind", tier:1},
-	  {radius: 0.3 * radius, label:"heart", tier:1},
+	  {radius: 0.1 * radius, label:"Instinct", tier:1},
+	  {radius: 0.2 * radius, label:"Cognition", tier:1},
+	  {radius: 0.3 * radius, label:"Emotion", tier:1},
 	  {radius: 0.4 * radius, label:"match", tier:2},
 	  {radius: 0.5 * radius, label:"connect", tier:2},
 	  {radius: 0.6 * radius, label:"bond", tier:2},
