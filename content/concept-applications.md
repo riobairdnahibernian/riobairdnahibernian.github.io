@@ -1,4 +1,4 @@
-## Applications
+# Applications
 
 Sympathetic intelligence is ubiquitous, it is everywhere.
 
@@ -8,12 +8,12 @@ The applications all occur in the third tier, where we live, learn and work .
 
 While there are many potential applications, the following are just a few of the most prominent ones.
 
-# Education.
+## Education.
 
-# Healthcare.
+## Healthcare.
 
-# Policing.
+## Policing.
 
-# Corporate.
+## Corporate.
 
-# Psychology.
+## Psychology.
