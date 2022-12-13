@@ -1,3 +1,19 @@
 ## Applications
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros olore eu feugiat nulla facilisis at vero eros.
+Sympathetic intelligence is ubiquitous, it is everywhere.
+
+But as you can see from the Socio neurological schematic on the homepage of the site for sympathetic intelligence, its application is context specific.
+
+The applications all occur in the third tier, where we live, learn and work .
+
+While there are many potential applications, the following are just a few of the most prominent ones.
+
+# Education.
+
+# Healthcare.
+
+# Policing.
+
+# Corporate.
+
+# Psychology.
